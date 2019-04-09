@@ -1,0 +1,18 @@
+{
+  "name": "express-rate-limit",
+  "version": "0.0.1",
+  "description": "Request with rate limit",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "express": "^4.16.4",
+    "redis": "^2.8.0",
+    "@types/node": "^11.13.2"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC"
+}
