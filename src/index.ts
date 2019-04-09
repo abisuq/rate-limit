@@ -6,7 +6,7 @@ export default (middlewareOptions: IMiddlewareOptions) => {
     try {
       let bucket = await options.store.get(key);
       const currentTime = Date.now();
-      if (!bucket) {
+      if (!bucket || bucket.tokens === undefined) {
         bucket = options.createBucket(currentTime);
       }
 
@@ -40,6 +40,7 @@ class Options {
   public onPass: (req: any, res: any, next: any, bucket: IBucket) => void;
   public onReject: (req: any, res: any, next: any, bucket: IBucket) => void;
   constructor(options: IMiddlewareOptions) {
+    options = { ...options };
     this.window = options.window;
     this.times = options.times;
     this.store = new Store(options.store);

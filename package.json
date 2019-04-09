@@ -3,14 +3,16 @@
   "version": "0.0.1",
   "description": "Request with rate limit",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^11.13.2",
     "express": "^4.16.4",
     "redis": "^2.8.0",
-    "@types/node": "^11.13.2"
+    "supertest": "^4.0.2",
+    "tap": "^12.6.1"
   },
   "scripts": {
+    "test": "tap test/test.js --coverage",
     "build": "tsc"
   },
   "author": "",
