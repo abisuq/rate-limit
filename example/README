@@ -1,0 +1,6 @@
+```
+cd example
+tsc test.ts
+node test.js
+docker run -d -p 6379:6379 redis
+```
